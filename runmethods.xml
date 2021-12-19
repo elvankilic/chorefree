@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="run methods name">
+    <test name="run methods 1">
+        <classes>
+            <class name="com.techproed.tests.TestBaseDemo">
+                <methods>
+ <!--           RUN ONLY test1       -->
+ <!--           include ->just run only this method named test1  -->
+                    <include name="test1"/>
+                </methods>
+            </class>
+ <!--           Adding another class tag to configure new classes-->
+            <class name="com.techproed.tests.Alerts">
+                <methods>
+ <!--           RUN all methods except "acceptAlert" -->
+                    <exclude name="acceptAlert"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
